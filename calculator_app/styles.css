@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.theme-toggle {
+  margin-bottom: 20px;
+}
+
+#theme-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+}
+
+.calculator {
+  width: 320px;
+  background: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  margin: auto;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 2em;
+  text-align: right;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #000;
+  color: #0f0;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  height: 60px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.operator {
+  background-color: #f39c12;
+}
+
+.equal {
+  grid-column: span 2;
+  background-color: #27ae60;
+}
+
+.clear {
+  background-color: #e74c3c;
+}
+
+/* History Section */
+.history {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 300px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+}
+
+.history li {
+  margin: 5px 0;
+  padding: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Mode */
+body.dark {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ddd;
+}
+
+body.dark .calculator {
+  background: #111;
+}
+
+body.dark #display {
+  background: #222;
+  color: #0f0;
+}
+
+body.dark #theme-btn {
+  background: #333;
+  color: #fff;
+}
+@media (max-width: 480px) {
+  .calculator {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .display {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
